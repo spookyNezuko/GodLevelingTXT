@@ -1,4 +1,4 @@
 <Solution>
-  <Project Path="ConsoleApp1/ConsoleApp1.csproj" />
+  <Project Path="ConsoleApp1/ConsoleApp1.csproj" Id="f41efb28-cdbf-4c71-b81f-22e70411c18c" />
   <Project Path="Core/Core.csproj" />
 </Solution>

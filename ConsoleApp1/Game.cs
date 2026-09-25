@@ -12,7 +12,8 @@ namespace ConsoleApp1
         {
             if (true) //here i'll check if there's already a name in the future for now it stays like this
             {
-                InitialNameSelection.Render();
+                string name = InitialNameSelection.Render();
+
             }
         }
     }
