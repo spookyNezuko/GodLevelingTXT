@@ -14,8 +14,11 @@ namespace ConsoleApp1
             if (true) //here i'll check if there's already a name in the future for now it stays like this
             {
                 string name = InitialNameSelection.Render();
-                
+                Player player = new Player(name);
+                PlayerStats.Render(player);
             }
         }
+
+        
     }
 }
