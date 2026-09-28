@@ -23,15 +23,21 @@ namespace ConsoleApp1
         }
     }
 
-    internal class PlayerStats
+    internal class PlayerStatsScreen
     {
         static internal void Render(Player player){
             Console.WriteLine("these are your stats");
             Console.WriteLine();
             Console.WriteLine($"you're level: {player.GetLevel()}");
-            Console.WriteLine($"you're health points: {player.GetCurrentHP()}");
+            Console.WriteLine($"you're health points: {player.GetCurrentHP()} {player.HPmeter()}");
         }
     }
 
+    internal class MainGameScreens
+    {
+        string selectionScreen = """
+           
+            """;
+    }
     
 }

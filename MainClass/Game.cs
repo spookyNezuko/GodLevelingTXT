@@ -15,7 +15,7 @@ namespace ConsoleApp1
             {
                 string name = InitialNameSelection.Render();
                 Player player = new Player(name);
-                PlayerStats.Render(player);
+                PlayerStatsScreen.Render(player);
             }
         }
 
