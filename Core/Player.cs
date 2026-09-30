@@ -17,9 +17,8 @@
         public int GetCurrentHP() => _HealthPoints;
         public string HPmeter()
         {
-            float percent = (_HealthPoints / _maximumHealthPoints) * 100;
-            string healthBar;
-
+            int percent = getHpPercent();
+            
             return percent switch
             {
                 >= 81 => "█████",
@@ -30,5 +29,7 @@
                 _ => "░░░░░"
             };
         }
+
+        public int getHpPercent() => (_HealthPoints / _maximumHealthPoints) * 100;
     }
 }

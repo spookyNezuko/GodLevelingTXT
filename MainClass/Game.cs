@@ -15,9 +15,13 @@ namespace ConsoleApp1
             {
                 string name = InitialNameSelection.Render();
                 Player player = new Player(name);
-                PlayerStatsScreen.Render(player);
+                
             }
+            
+            MainGameScreens.Render();
         }
+
+        
 
         
     }

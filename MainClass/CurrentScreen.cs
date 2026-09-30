@@ -35,9 +35,39 @@ namespace ConsoleApp1
 
     internal class MainGameScreens
     {
-        string selectionScreen = """
-           
+        
+
+        static internal Byte Render()
+        {
+            string selectionScreen = """
+            ████████████████████████████████████████████████████████████
+
+                         G O D  L E V E L I N G
+
+                      The world awaits you.
+
+                    1. Explore
+                    2. Inventory
+                    3. Stats
+                    4. Leave this world
+
+                        > Enter your choice
+
+            ████████████████████████████████████████████████████████████
             """;
+            Console.Clear();
+            Console.WriteLine(selectionScreen);
+            if (Byte.TryParse(Console.ReadLine(), out Byte choice)){
+                return choice;
+            }
+            else
+            {
+                Render();
+                return 0;
+                
+                
+            }
+        }
     }
     
 }
