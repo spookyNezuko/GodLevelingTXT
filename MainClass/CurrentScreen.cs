@@ -26,10 +26,14 @@ namespace ConsoleApp1
     internal class PlayerStatsScreen
     {
         static internal void Render(Player player){
+            Console.Clear();
             Console.WriteLine("these are your stats");
             Console.WriteLine();
             Console.WriteLine($"you're level: {player.GetLevel()}");
-            Console.WriteLine($"you're health points: {player.GetCurrentHP()} {player.HPmeter()}");
+            Console.WriteLine($"your health points: {player.GetCurrentHP()} {player.HPmeter()}");
+            Console.WriteLine();
+            Console.WriteLine("press any key to continue...");
+            Console.ReadKey();
         }
     }
 
@@ -40,7 +44,7 @@ namespace ConsoleApp1
         static internal Byte Render()
         {
             string selectionScreen = """
-            ████████████████████████████████████████████████████████████
+            
 
                          G O D  L E V E L I N G
 
@@ -53,19 +57,23 @@ namespace ConsoleApp1
 
                         > Enter your choice
 
-            ████████████████████████████████████████████████████████████
+            
             """;
             Console.Clear();
             Console.WriteLine(selectionScreen);
             if (Byte.TryParse(Console.ReadLine(), out Byte choice)){
-                return choice;
+                if(choice >= 1 && choice <= 4)
+                {
+                    return choice;
+                }
+                else
+                {
+                    return Render();
+                }
             }
             else
             {
-                Render();
-                return 0;
-                
-                
+                return Render();
             }
         }
     }

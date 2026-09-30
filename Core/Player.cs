@@ -17,19 +17,19 @@
         public int GetCurrentHP() => _HealthPoints;
         public string HPmeter()
         {
-            int percent = getHpPercent();
+            float percent = getHpPercent();
             
             return percent switch
             {
-                >= 81 => "█████",
-                >= 61 => "████░",
-                >= 41 => "███░░",
-                >= 21 => "██░░░",
-                > 0 => "█░░░░",
-                _ => "░░░░░"
+                >= 81 => "|█████|",
+                >= 61 => "|████░|",
+                >= 41 => "|███░░|",
+                >= 21 => "|██░░░|",
+                > 0 => "|█░░░░|",
+                _ => "|░░░░░|"
             };
         }
 
-        public int getHpPercent() => (_HealthPoints / _maximumHealthPoints) * 100;
+        public float getHpPercent() => (_HealthPoints * 100 ) / _maximumHealthPoints ;
     }
 }
