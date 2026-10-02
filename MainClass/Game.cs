@@ -35,11 +35,14 @@ namespace ConsoleApp1
 
         void ProcessMenuChoice(Byte choice, Player player)
         {
-            if (false){
+            if (choice == 1){
+                Exploration exploration = new Exploration();
+                exploration.Start();
+            }
+            else if(false){
 
-            }else if(false){
-
-            }else if(choice == 3){
+            }
+            else if(choice == 3){
                 PlayerStatsScreen.Render(player);
                 
             }

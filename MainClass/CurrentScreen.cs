@@ -48,7 +48,7 @@ namespace ConsoleApp1
 
                          G O D  L E V E L I N G
 
-                      The world awaits you.
+                          The world awaits you.
 
                     1. Explore
                     2. Inventory

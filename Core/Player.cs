@@ -15,6 +15,8 @@
         public int GetLevel() => _level;
         public int GetMaxHP() => _maximumHealthPoints;
         public int GetCurrentHP() => _HealthPoints;
+        public float getHpPercent() => (_HealthPoints * 100 ) / _maximumHealthPoints ;
+
         public string HPmeter()
         {
             float percent = getHpPercent();
@@ -30,6 +32,6 @@
             };
         }
 
-        public float getHpPercent() => (_HealthPoints * 100 ) / _maximumHealthPoints ;
+        
     }
 }
