@@ -8,15 +8,21 @@ namespace Core
     {
         bool isExploring = true;
 
-        public void Start()
+        public void Start(Player player)
         {
             while (isExploring)
             {
                 Console.Clear();
                 Console.WriteLine(explorationScreen());
 
+
+
                 StopRequest();
             }
+        }
+
+        internal void Explore(Player player) {
+            
         }
 
         public void StopRequest()
@@ -34,10 +40,7 @@ namespace Core
                 {
                     if(choice == 2) { isExploring = false; }
                 }
-                else
-                {
-                    
-                }
+                
             }
         } 
 

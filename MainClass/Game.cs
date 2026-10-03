@@ -37,7 +37,7 @@ namespace ConsoleApp1
         {
             if (choice == 1){
                 Exploration exploration = new Exploration();
-                exploration.Start();
+                exploration.Start(player);
             }
             else if(false){
 
