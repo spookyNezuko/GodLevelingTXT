@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using System.Text;
 
 namespace Core
@@ -15,26 +18,30 @@ namespace Core
                 Console.Clear();
                 Console.WriteLine(explorationScreen());
 
+                Explore(player, RandomEventPicker.Pick());
 
-
-                StopRequest();
+                
             }
         }
 
-        internal void Explore(Player player) {
-            
+        internal void Explore(Player player, Events pickedEvent) {
+            if (pickedEvent == Events.Walk)
+            {
+                Walk.Render();
+            }
         }
 
         public void StopRequest()
         {
-            string stopRequestScreen = """
+           string stopRequestScreen = 
+            """
                 1. Keep exploring
                 2. Leave
             """;
 
             Console.WriteLine(stopRequestScreen);
 
-            if (Byte.TryParse(Console.ReadLine(), out Byte choice))
+            if (byte.TryParse(Console.ReadLine(), out byte choice))
             {
                 if (choice >= 1 && choice <= 2)
                 {
@@ -46,11 +53,30 @@ namespace Core
 
         public string explorationScreen()
         {
-            string expScreen = """
-                    you're exploring...
+            string expScreen = 
+                """
+                    
                 """;
 
             return expScreen;
         }
+    }
+
+    internal static class RandomEventPicker{
+        internal static Events Pick()
+        {
+            int roll = Random.Shared.Next(0, 2);
+
+            return roll switch
+            {
+                0 => Events.Walk,
+                1 => Events.Treasure,
+                _ => throw new Exception("invalid event roll")
+            };
+        }
+    }
+
+    internal enum Events{
+        Walk, Treasure
     }
 }

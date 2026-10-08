@@ -41,7 +41,7 @@ namespace ConsoleApp1
     {
         
 
-        static internal Byte Render()
+        static internal byte Render()
         {
             string selectionScreen = """
             
@@ -61,7 +61,7 @@ namespace ConsoleApp1
             """;
             Console.Clear();
             Console.WriteLine(selectionScreen);
-            if (Byte.TryParse(Console.ReadLine(), out Byte choice)){
+            if (byte.TryParse(Console.ReadLine(), out byte choice)){
                 if(choice >= 1 && choice <= 4)
                 {
                     return choice;

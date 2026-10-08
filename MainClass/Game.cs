@@ -33,7 +33,7 @@ namespace ConsoleApp1
             
         }
 
-        void ProcessMenuChoice(Byte choice, Player player)
+        void ProcessMenuChoice(byte choice, Player player)
         {
             if (choice == 1){
                 Exploration exploration = new Exploration();
@@ -65,7 +65,7 @@ namespace ConsoleApp1
             Player player = new Player(name);
             while (gameRunning)
             {
-                Byte choice = MainGameScreens.Render();
+                byte choice = MainGameScreens.Render();
                 ProcessMenuChoice(choice, player);
             }
 
