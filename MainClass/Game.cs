@@ -39,8 +39,8 @@ namespace ConsoleApp1
                 Exploration exploration = new Exploration();
                 exploration.Start(player);
             }
-            else if(false){
-
+            else if(choice == 2){
+                InventoryScreen.Render(player);
             }
             else if(choice == 3){
                 PlayerStatsScreen.Render(player);

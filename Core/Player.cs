@@ -6,6 +6,7 @@
         int _level = 1;
         int _maximumHealthPoints = 100;
         int _HealthPoints = 100;
+        readonly public Inventory _inventory = new Inventory();
 
         public Player(string name)
         {

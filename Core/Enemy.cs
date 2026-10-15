@@ -12,7 +12,7 @@ namespace Core
         protected int _level;
     }
 
-    public class SmallGoblin: Enemy
+    public class SmallGoblin : Enemy
     {
         public SmallGoblin(int level)
         {
