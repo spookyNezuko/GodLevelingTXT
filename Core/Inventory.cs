@@ -19,13 +19,18 @@ namespace Core
 
         public void RemoveItem(int index)
         {
-            _itemsList[index] = ItemsEnum.None;
-
-            for(int i = 0; i < _itemsList.Length; i++)
+            if (_itemsList[index] != ItemsEnum.None)
             {
-                _itemsList[index + i] = _itemsList[index + i + 1];
+                for (int i = index + 1; i < _itemsList.Length; i++)
+                {
+                    _itemsList[i - 1] = _itemsList[i];
+                }
+
+                _slotsFilled--;
             }
         }
+
+        public ItemsEnum ReadItem(int index) => _itemsList[index];
 
     }
 }

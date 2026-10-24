@@ -29,6 +29,10 @@ namespace Core
             {
                 Walk.Render();
             }
+            else if (pickedEvent == Events.Treasure)
+            {
+                Treasure.GiveReward(player);
+            }
         }
 
         public void StopRequest()

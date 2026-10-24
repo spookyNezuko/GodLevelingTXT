@@ -63,13 +63,13 @@ namespace ConsoleApp1
             Console.Clear();
             Console.WriteLine(inventoryScreen);
 
-            /* for (int i = 0; i < player._inventory._itemsList.Length; i++) come back to this after creating a reading function for itemsList.
+            for (int i = 0; i < 10; i++) //change 10 for lists lenght if we later implement varying dimension inventory
             {
-                if (player._inventory._itemsList[i] != ItemsEnum.None)
+                if (player._inventory.ReadItem(i) != ItemsEnum.None)
                 {
-                    Console.WriteLine(player._inventory._itemsList[i]);
+                    Console.WriteLine(player._inventory.ReadItem(i));
                 }
-            } */
+            }
 
             Console.WriteLine("────────────────────────────────────────────────────────────────────────────");
             Console.WriteLine("press any key to continue...");
